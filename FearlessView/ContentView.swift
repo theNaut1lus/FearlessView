@@ -9,11 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Rectangle()
+                .fill(.fearless)
+                .ignoresSafeArea()
+            VStack {
+                Text("It's a love story...")
+                HStack {
+                    Image(systemName: "heart")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 100)
+                        .foregroundStyle(.red)
+                    Image(systemName: "book")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 100)
+                        .foregroundStyle(.purple)
+                    Image(systemName: "eyes")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 100)
+                        .foregroundStyle(.blue)
+                }
+            }
         }
         .padding()
     }
